@@ -1,11 +1,13 @@
 package com.carRental.data.models;
 
 public class Car implements Rentable{
+    private final int carID;
     private final String model;
     private final CarCategory category;
     private final RentalType type;
 
-    public Car(String model, CarCategory category, RentalType type) {
+    public Car(int id, String model, CarCategory category, RentalType type) {
+        this.carID = id;
         this.model = model;
         this.category = category;
         this.type = type;
@@ -38,4 +40,7 @@ public class Car implements Rentable{
         return getDescription();
     }
 
+    public int getId() {
+        return carID;
+    }
 }

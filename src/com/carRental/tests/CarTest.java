@@ -12,7 +12,7 @@ public class CarTest {
 
     @Test
     public void testCarImplementsRentable() {
-        Car car = new Car("Toyota Corolla", CarCategory.ECONOMY, RentalType.DAILY);
+        Car car = new Car(1, "Toyota Corolla", CarCategory.ECONOMY, RentalType.DAILY);
 
         assertEquals("Toyota Corolla", car.getModel());
         assertEquals(CarCategory.ECONOMY, car.getCategory());
@@ -26,7 +26,7 @@ public class CarTest {
 
     @Test
     public void testCarToString() {
-        Car car = new Car("Range Rover", CarCategory.LUXURY, RentalType.MONTHLY);
+        Car car = new Car(1, "Range Rover", CarCategory.LUXURY, RentalType.MONTHLY);
         String expectedString = "Luxury Range Rover ($1000.0 per day)";
         assertEquals(expectedString, car.toString());
     }

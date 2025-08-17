@@ -15,7 +15,7 @@ public class BookingTest {
 
     @Test
     public void testBookingInitialization() {
-        Car car = new Car("Toyota Corolla", CarCategory.ECONOMY, RentalType.DAILY);
+        Car car = new Car(1, "Toyota Corolla", CarCategory.ECONOMY, RentalType.DAILY);
         LocalDateTime rentalDate = LocalDateTime.now();
         LocalDateTime returnDate = rentalDate.plusDays(3);
 
@@ -30,7 +30,7 @@ public class BookingTest {
 
     @Test
     public void testBookingToString() {
-        Car car = new Car("Honda Civic", CarCategory.SUV, RentalType.WEEKLY);
+        Car car = new Car(1, "Honda Civic", CarCategory.SUV, RentalType.WEEKLY);
         LocalDateTime rentalDate = LocalDateTime.of(2025, 8, 10, 10, 0);
         LocalDateTime returnDate = rentalDate.of(2025, 8, 17, 10, 0);
 
@@ -43,7 +43,7 @@ public class BookingTest {
 
     @Test
     public void testBookingDateValidation() {
-        Car car = new Car("BMW X5", CarCategory.LUXURY, RentalType.DAILY);
+        Car car = new Car(1, "BMW X5", CarCategory.LUXURY, RentalType.DAILY);
         LocalDateTime rentalDate = LocalDateTime.of(2025, 8, 10, 12, 0);
         LocalDateTime returnDate = rentalDate.of(2025, 8, 14, 12, 0);
 

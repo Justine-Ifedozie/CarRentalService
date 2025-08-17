@@ -10,7 +10,7 @@ public class Booking {
     private LocalDateTime returnDate;
 
     public Booking(int bookingID, Car car, String customerName, LocalDateTime rentalDate, LocalDateTime returnDate) {
-        if (returnDate.isBefore(rentalDate)) {
+        if (returnDate != null && returnDate.isBefore(rentalDate)) {
             throw new IllegalArgumentException("Return Date cannot be before Return Date");
         }
         this.bookingID = bookingID;
